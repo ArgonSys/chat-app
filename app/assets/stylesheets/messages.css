@@ -1,7 +1,37 @@
 /********************
    general
 ********************/
+
 li {
   list-style: none;
+}
+
+
+.wrapper {
+  display: flex;
+}
+
+.main,
+.sidebar {
+  height: 100vh;
+}
+
+/********************
+   sidebar
+********************/
+
+.sidebar {
+  width: 300px;
+  background-color: #253141;
+}
+
+
+/********************
+   mainchat
+********************/
+
+.main {
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
 }
 
