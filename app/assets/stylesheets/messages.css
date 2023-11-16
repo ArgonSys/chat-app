@@ -30,6 +30,11 @@ li {
   background-color: #253141;
 }
 
+.sidebar-header,
+.rooms {
+  padding: 0 20px;
+}
+
 .rooms {
   height: calc(100% - 100px);
   background-color: #2F3E51;
@@ -45,12 +50,21 @@ li {
   background-color: #ffffff;
 }
 
+.main-header,
+.posts,
+.post-form {
+  padding: 0 40px;
+}
+
 .posts {
   height: calc(100% - 190px);
   background-color: #FAFAFA;
+  padding-top: 46px;
 }
 
 .post-form {
   height: 90px;
   background-color: #DDDDDD;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
