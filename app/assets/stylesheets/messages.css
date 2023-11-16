@@ -16,6 +16,11 @@ li {
   height: 100vh;
 }
 
+.main-header,
+.sidebar-header {
+  height: 100px;
+}
+
 /********************
    sidebar
 ********************/
@@ -23,6 +28,11 @@ li {
 .sidebar {
   width: 300px;
   background-color: #253141;
+}
+
+.rooms {
+  height: calc(100% - 100px);
+  background-color: #2F3E51;
 }
 
 
@@ -35,3 +45,12 @@ li {
   background-color: #ffffff;
 }
 
+.posts {
+  height: calc(100% - 190px);
+  background-color: #FAFAFA;
+}
+
+.post-form {
+  height: 90px;
+  background-color: #DDDDDD;
+}
