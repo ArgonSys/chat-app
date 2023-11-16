@@ -56,6 +56,13 @@ li {
 .rooms {
   height: calc(100% - 100px);
   background-color: #2F3E51;
+  overflow: scroll;
+}
+
+.room {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 
