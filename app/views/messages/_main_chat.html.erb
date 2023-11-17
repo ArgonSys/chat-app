@@ -4,24 +4,7 @@
     <%= link_to "チャットを終了する", "#", class: "del-room-btn"%>
   </div>
   <div class="posts">
-    <div class="post">
-      <div class="post-header">
-        <div class="author">Tom</div>
-        <div class="datetime">2020/3/31 (Wed) 12:34:56</div>
-      </div>
-      <div class="content">
-        おはよう
-      </div>
-    </div>
-    <div class="post">
-      <div class="post-header">
-        <div class="author">Sim</div>
-        <div class="datetime">2020/3/31 (Wed) 12:34:56</div>
-      </div>
-      <div class="content">
-        おはよう
-      </div>
-    </div>
+    <%= render partial: "message", collection: @messages%>
   </div>
   <%= form_with model: [@room, @message], local: true, class: "post-form" do |f| %>
     <div class="input-form">
