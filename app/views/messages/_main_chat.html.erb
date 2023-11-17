@@ -23,11 +23,13 @@
       </div>
     </div>
   </div>
-  <div class="post-form">
+  <%= form_with path: "#", local: true, class: "post-form" do |f| %>
     <div class="input-form">
-      <div class="text-form"></div>
-      <div class="img-btn"></div>
+      <%= f.text_field :text, placeholder: "type a message", class: "text-form" %>
+      <label class="img-btn">画像
+        <%= f.file_field :image, class: "hidden" %>
+      </label>
     </div>
-    <div class="submit-btn"></div>
-  </div>
+    <%= f.submit "送信", class: "submit-btn" %>
+  <% end %>
 </div>
