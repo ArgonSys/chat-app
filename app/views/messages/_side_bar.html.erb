@@ -6,7 +6,7 @@
   <div class="rooms">
     <% @rooms.each do |room| %>
       <div  class="room">
-        <%= link_to  room, "#", class: "room__link"%>      
+        <%= link_to  room.name, "#", class: "room__link"%>      
       </div>
     <% end %>
   </div>
