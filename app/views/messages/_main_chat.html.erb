@@ -1,7 +1,7 @@
 <div class="main">
   <div class="main-header">
     <div class="mainroom"><%= @room.name %></div>
-    <%= link_to "チャットを終了する", "#", class: "del-room-btn"%>
+    <%= link_to "チャットを終了する", room_path(@room), data: {turbo_method: :delete}, class: "del-room-btn"%>
   </div>
   <div class="posts">
     <%= render partial: "message", collection: @messages%>
