@@ -1,12 +1,12 @@
 <div class="sidebar">
   <div class="sidebar-header">
     <%= link_to  current_user.name, edit_user_path(current_user), class:"current-user" %>
-    <%= link_to  "チャットを作成する", "#", class: "create-room-btn" %>
+    <%= link_to  "チャットを作成する", new_room_path,  class: "create-room-btn" %>
   </div>
   <div class="rooms">
     <% @rooms.each do |room| %>
       <div  class="room">
-        <%= link_to  room, "#", class: "room__link"%>      
+        <%= link_to  room.name, "#", class: "room__link"%>      
       </div>
     <% end %>
   </div>
