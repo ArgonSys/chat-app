@@ -1,4 +1,7 @@
 class RoomsController < ApplicationController
+  def index
+    @rooms = current_user.rooms
+  end
   def new
     @room = Room.new
     @users = User.where.not(id: current_user.id)
