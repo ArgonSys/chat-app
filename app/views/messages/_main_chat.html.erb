@@ -1,31 +1,14 @@
 <div class="main">
   <div class="main-header">
-    <div class="mainroom">mainroom</div>
-    <%= link_to "チャットを終了する", "#", class: "del-room-btn"%>
+    <div class="mainroom"><%= @room.name %></div>
+    <%= link_to "チャットを終了する", room_path(@room), data: {turbo_method: :delete}, class: "del-room-btn"%>
   </div>
   <div class="posts">
-    <div class="post">
-      <div class="post-header">
-        <div class="author">Tom</div>
-        <div class="datetime">2020/3/31 (Wed) 12:34:56</div>
-      </div>
-      <div class="content">
-        おはよう
-      </div>
-    </div>
-    <div class="post">
-      <div class="post-header">
-        <div class="author">Sim</div>
-        <div class="datetime">2020/3/31 (Wed) 12:34:56</div>
-      </div>
-      <div class="content">
-        おはよう
-      </div>
-    </div>
+    <%= render partial: "message", collection: @messages%>
   </div>
-  <%= form_with path: "#", local: true, class: "post-form" do |f| %>
+  <%= form_with model: [@room, @message], local: true, class: "post-form" do |f| %>
     <div class="input-form">
-      <%= f.text_field :text, placeholder: "type a message", class: "text-form" %>
+      <%= f.text_field :content, placeholder: "type a message", class: "text-form" %>
       <label class="img-btn">画像
         <%= f.file_field :image, class: "hidden" %>
       </label>
