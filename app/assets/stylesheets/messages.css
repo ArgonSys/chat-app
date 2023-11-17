@@ -1,6 +1,9 @@
 /********************
    general
 ********************/
+a {
+  text-decoration: none;
+}
 
 li {
   list-style: none;
@@ -60,9 +63,12 @@ li {
 }
 
 .room {
-  color: white;
   padding-top: 20px;
   padding-bottom: 40px;
+}
+
+.room__link {
+  color: white;
 }
 
 

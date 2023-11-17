@@ -1,19 +1,13 @@
 <div class="sidebar">
   <div class="sidebar-header">
-    <div class="current-user">Tom</div>
-    <div class="create-room-btn">チャットを作成する</div>
+    <%= link_to  "Tom", "#", class:"current-user" %>
+    <%= link_to  "チャットを作成する", "#", class: "create-room-btn" %>
   </div>
   <div class="rooms">
-    <div class="room">techroom1</div>
-    <div class="room">techroom1</div>
-    <div class="room">techroom1</div>
-    <div class="room">techroom1</div>
-    <div class="room">techroom1</div>
-    <div class="room">techroom1</div>
-    <div class="room">techroom1</div>
-    <div class="room">techroom1</div>
-    <div class="room">techroom1</div>
-    <div class="room">techroom1</div>
-    <div class="room">techroom1</div>
+    <% @rooms.each do |room| %>
+      <div  class="room">
+        <%= link_to  room, "#", class: "room__link"%>      
+      </div>
+    <% end %>
   </div>
 </div>
