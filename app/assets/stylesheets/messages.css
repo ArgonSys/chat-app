@@ -87,6 +87,24 @@ li {
   padding: 0 40px;
 }
 
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainroom {
+  font-size: 24px;
+  color: #333;
+}
+
+.del-room-btn {
+  font-size: 20px;
+  color: darkred;
+  padding: 20px;
+  border: 1px solid darkred;
+}
+
 .posts {
   height: calc(100% - 190px);
   background-color: #FAFAFA;
